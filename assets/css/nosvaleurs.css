@@ -1,0 +1,82 @@
+.conteneur-fond-ecran * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.conteneur-fond-ecran {
+    background-image: url("../../images/unsplash_Aln972onVgE.png"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 85vh;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.conteneur-principal {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.logo-central-fond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.grille-valeurs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 60px 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.carte-valeur {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 8px solid #6185EF;
+}
+
+.carte-valeur p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.titre-orange {
+    color: #e95d3f;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+    .grille-valeurs {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .logo-central-fond {
+        display: none;
+    }
+}

@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.page-title {
+    color: #5a7ec9;
+    padding: 20px 40px;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.layout-grid {
+    padding: 1%;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.campaigns-list {
+    flex: 2;
+    height: 70vh;
+    overflow-y: auto;
+    padding-right: 20px;
+
+
+}
+
+.campaigns-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.campaigns-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.campaigns-list::-webkit-scrollbar-thumb {
+    background: #2A3A6D;
+    border-radius: 10px;
+}
+
+.campaigns-list::-webkit-scrollbar-thumb:hover {
+    background: #1a2238;
+}
+
+.calendar-wrapper {
+    flex: 1;
+    min-width: 300px;
+
+    position: sticky;
+    top: 20px;
+}
+
+.campaign-card {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.campaign-card:hover {
+    transform: translateY(-2px);
+    border-color: #2A3A6D;
+}
+
+.camp-img {
+    height: 180px;
+    width: 100%;
+    background-color: #eee;
+}
+
+.camp-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.camp-content {
+    padding: 20px;
+}
+
+.camp-content h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.camp-desc {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.camp-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.camp-date {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.btn-subscribe {
+    background-color: #2A3A6D;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-subscribe:hover {
+    background-color: #1a2238;
+}
+
+.calendar-wrapper h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.calendar-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-header {
+    background-color: #3a75c4;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #2A3A6D;
+    color: white;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 8px 0;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #fff;
+}
+
+.day,
+.empty {
+    height: 45px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    position: relative;
+    cursor: pointer;
+    color: #333;
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.event-dot {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.calendar-nav button {
+    background: white;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.calendar-nav button:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s;
+}
+
+.modal-header h2 {
+    margin-top: 0;
+    color: #2A3A6D;
+}
+
+.modal-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-modal-cancel {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-modal-confirm {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-modal-danger {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-unsubscribe {
+    background-color: #fff;
+    color: #27ae60;
+    border: 2px solid #27ae60;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-unsubscribe:hover {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.btn-unsubscribe:hover span {
+    display: none;
+}
+
+.btn-unsubscribe:hover:after {
+    content: "Se désinscrire";
+}
+
+.btn-unsubscribe span {
+    display: inline;
+}
+
+.btn-unsubscribe:after {
+    content: "";
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

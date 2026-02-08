@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.main-content {
+  padding: 30px 50px;
+}
+
+.hero-banner {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  color: #5a7ec9;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* Ratio tableau / formulaire */
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Tableau */
+.resources-table-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.btn-action {
+  background-color: transparent;
+  color: #5a7ec9;
+  border: 1px solid #5a7ec9; /* Petit contour pour l'action */
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.btn-action:hover {
+  background-color: #5a7ec9;
+  color: white;
+}
+
+/* Formulaire (reprise du style addObj) */
+.form-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+  font-size: 13px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-input:focus, .form-textarea:focus {
+    border-color: #5a7ec9;
+    outline: none;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.upload-box {
+  border: 1px dashed #ddd;
+  border-radius: 6px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  position: relative;
+  cursor: pointer;
+}
+
+.file-input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  cursor: pointer;
+}
+
+.upload-icon {
+  font-size: 20px;
+  color: #5a7ec9;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.btn-reset,
+.btn-submit {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-reset {
+  background-color: #f1f3f5;
+  color: #555;
+}
+
+.btn-reset:hover { background-color: #e9ecef; }
+
+.btn-submit {
+  background-color: #2e3b6e;
+  color: white;
+}
+
+.btn-submit:hover { background-color: #1f284d; }
